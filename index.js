@@ -1,5 +1,6 @@
 import inquirer from "inquirer";
 import { add, sub, myltiply, divide } from "./calculator.js";
+import chalk from 'chalk';
 async function calculator() {
     let answer = 0;
     let choice = 1;
@@ -15,33 +16,30 @@ async function calculator() {
             let num1 = await inquirer.prompt([{
                     name: "number1",
                     type: "number",
-                    message: "Enter a number:"
+                    message: "Enter the first number:"
                 }
             ]);
             let num2 = await inquirer.prompt([{
                     name: "number2",
                     type: "number",
-                    message: "Enter a number:"
+                    message: "Enter the second number:"
                 }
             ]);
             switch (choice) {
                 case 1:
-                    console.log(add(num1.number1, num2.number2));
+                    console.log(chalk.blue(add(num1.number1, num2.number2)));
                     break;
                 case 2:
-                    console.log(sub(num1.number1, num2.number2));
+                    console.log(chalk.blue(sub(num1.number1, num2.number2)));
                     break;
                 case 3:
-                    console.log(myltiply(num1.number1, num2.number2));
+                    console.log(chalk.blue(myltiply(num1.number1, num2.number2)));
                     break;
                 case 4:
-                    console.log(divide(num1.number1, num2.number2));
-                    break;
-                case 0:
-                    console.log("Exiting...");
+                    console.log(chalk.blue(divide(num1.number1, num2.number2)));
                     break;
                 default:
-                    console.log("Invalid choice.");
+                    console.log(chalk.red("Invalid operation choice."));
                     break;
             }
         }
