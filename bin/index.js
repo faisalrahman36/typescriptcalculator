@@ -1,5 +1,6 @@
+#!/usr/bin/env node
 import inquirer from "inquirer";
-import { add, sub, myltiply, divide } from "./calculator.js";
+import { add, sub, myltiply, divide } from "../calculator.js";
 import chalk from 'chalk';
 async function calculator() {
     let answer = 0;

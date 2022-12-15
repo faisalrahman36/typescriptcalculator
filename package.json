@@ -1,21 +1,21 @@
 {
-  "name": "typescriptcalculator",
+  "name": "typescriptcalculatorfsl",
   "version": "1.0.0",
   "description": "",
-  "main": "index.cjs",
+  
+  "main": "./calculatorjs",
+  "bin": {
+    "typescriptcalculatorfsl": "./bin/index.js"
+  },
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "bin": {
-    "fsl-ts-calculator": "bin/index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@types/inquirer": "^9.0.3",
     "chalk": "^5.1.2",
-    "g": "^2.0.1",
     "inquirer": "^9.1.4",
     "nodenext": "^0.0.2"
   }
